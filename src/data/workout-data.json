@@ -1,0 +1,121 @@
+{
+    "workouts": [
+      {
+        "id": 1,
+        "name": "Push-ups",
+        "category": "Strength",
+        "difficulty": "Beginner",
+        "bodyPart": "Upper Body",
+        "equipment": "None",
+        "reps": 15,
+        "sets": 3,
+        "caloriesBurned": 50,
+        "image": "/images/pushup.png"
+      },
+      {
+        "id": 2,
+        "name": "Squats",
+        "category": "Strength",
+        "difficulty": "Beginner",
+        "bodyPart": "Lower Body",
+        "equipment": "None",
+        "reps": 12,
+        "sets": 3,
+        "caloriesBurned": 60,
+        "image": "/images/squats.png"
+      },
+      {
+        "id": 3,
+        "name": "Pull-ups",
+        "category": "Strength",
+        "difficulty": "Advanced",
+        "bodyPart": "Upper Body",
+        "equipment": "Pull-up Bar",
+        "reps": 8,
+        "sets": 3,
+        "caloriesBurned": 80,
+        "image": "/images/pullups.png"
+      },
+      {
+        "id": 4,
+        "name": "Jump Rope",
+        "category": "Cardio",
+        "difficulty": "Intermediate",
+        "bodyPart": "Full Body",
+        "equipment": "Jump Rope",
+        "duration": "10 min",
+        "caloriesBurned": 120,
+        "image": "/images/jumprope.png"
+      },
+      {
+        "id": 5,
+        "name": "Deadlifts",
+        "category": "Strength",
+        "difficulty": "Advanced",
+        "bodyPart": "Lower Body",
+        "equipment": "Barbell",
+        "reps": 6,
+        "sets": 4,
+        "caloriesBurned": 150,
+        "image": "/images/deadlifts.png"
+      },
+      {
+        "id": 6,
+        "name": "Plank",
+        "category": "Core",
+        "difficulty": "Intermediate",
+        "bodyPart": "Core",
+        "equipment": "None",
+        "duration": "60 sec",
+        "caloriesBurned": 30,
+        "image": "/images/plank.png"
+      },
+      {
+        "id": 7,
+        "name": "Bicycle Crunches",
+        "category": "Core",
+        "difficulty": "Intermediate",
+        "bodyPart": "Core",
+        "equipment": "None",
+        "reps": 20,
+        "sets": 3,
+        "caloriesBurned": 40,
+        "image": "/images/bicycle-crunches.png"
+      },
+      {
+        "id": 8,
+        "name": "Treadmill Running",
+        "category": "Cardio",
+        "difficulty": "Intermediate",
+        "bodyPart": "Full Body",
+        "equipment": "Treadmill",
+        "duration": "15 min",
+        "caloriesBurned": 200,
+        "image": "/images/treadmill.png"
+      },
+      {
+        "id": 9,
+        "name": "Bench Press",
+        "category": "Strength",
+        "difficulty": "Advanced",
+        "bodyPart": "Upper Body",
+        "equipment": "Barbell",
+        "reps": 10,
+        "sets": 3,
+        "caloriesBurned": 100,
+        "image": "/images/benchpress.png"
+      },
+      {
+        "id": 10,
+        "name": "Lunges",
+        "category": "Strength",
+        "difficulty": "Beginner",
+        "bodyPart": "Lower Body",
+        "equipment": "None",
+        "reps": 12,
+        "sets": 3,
+        "caloriesBurned": 55,
+        "image": "/images/lunges.png"
+      }
+    ]
+  }

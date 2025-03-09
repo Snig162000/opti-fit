@@ -1,0 +1,16 @@
+.topNav{
+    display: flex;
+    justify-content: space-between;
+    height: 3rem;
+    background-color: white;
+    color: black;
+    padding: 10px;
+}
+
+.tabs {
+    padding: 0 20px;
+}
+/* 
+.rightAlignedItems {
+    display: flex;
+} */
