@@ -1,3 +1,5 @@
+@tailwind utilities;
+
 .topNav{
     display: flex;
     justify-content: space-between;
@@ -10,7 +12,3 @@
 .tabs {
     padding: 0 20px;
 }
-/* 
-.rightAlignedItems {
-    display: flex;
-} */

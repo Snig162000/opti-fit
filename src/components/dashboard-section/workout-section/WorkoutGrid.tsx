@@ -1,16 +1,18 @@
-import workouts from "../../../data/workout-data.json";
-import WorkoutCard from "./WorkoutCard";
+import WorkoutCard, { WorkoutCardProps} from "./WorkoutCard";
 import styles from '../../../styles/dashboard.module.css';
 
-const WorkoutGrid = () => {
-  console.log(workouts.workouts);
+const WorkoutGrid = ({workoutList}: WorkoutCardProps) => {
   return (
     <div className={styles.cardContainer}>
-      {workouts.workouts.map((workout) => (
-        <div key={workout.id}>
-          <WorkoutCard workoutData={workout} />
-        </div>
-      ))}
+      {workoutList.length !==0 ? (
+        workoutList?.map((workout) => (
+          // <div >
+            <WorkoutCard key={workout?.exerciseId
+            } {...workout} />
+      ))): (
+        <h2>Sorry, we could not find the workouts.</h2>
+      )}
+      
     </div>
   );
 };
