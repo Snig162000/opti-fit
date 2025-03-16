@@ -38,7 +38,7 @@ const Dashboard = () => {
 
   return (
     <>
-      <h1>Welcome to the dashboard section!!</h1>
+      <h1 className="text-[3rem] font-semibold">Welcome to Dashboard</h1>
       {workoutList.length === 0 ? (
         <h2>Loading workouts....</h2>
       ) : (
