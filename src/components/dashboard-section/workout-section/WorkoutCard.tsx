@@ -1,4 +1,5 @@
 import styles from '../../../styles/dashboard.module.css';
+import Image from 'next/image';
 
 export interface WorkoutCardProps {
   workoutList: WorkoutType[];
@@ -7,6 +8,7 @@ export interface WorkoutCardProps {
 export type WorkoutType = {
     exerciseId: number;
     name: string;
+    gifUrl: string;
     bodyParts: string[];
     equipments: string[];
     instructions: string[];
@@ -23,9 +25,11 @@ const WorkoutCard = ( workouts: WorkoutType) => {
     instructions,
     secondaryMuscles,
     targetMuscles,
+    gifUrl,
   } = workouts;
   return (
     <div className={styles.cardContent}>
+      <img src={gifUrl} alt={'exercise-img'} height={30} width={30} />
       <li>{name}</li>
       <li>{bodyParts}</li>
       <li>{equipments}</li>

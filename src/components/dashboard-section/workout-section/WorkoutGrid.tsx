@@ -6,7 +6,6 @@ const WorkoutGrid = ({workoutList}: WorkoutCardProps) => {
     <div className={styles.cardContainer}>
       {workoutList.length !==0 ? (
         workoutList?.map((workout) => (
-          // <div >
             <WorkoutCard key={workout?.exerciseId
             } {...workout} />
       ))): (

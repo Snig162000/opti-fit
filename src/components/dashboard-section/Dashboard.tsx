@@ -7,6 +7,7 @@ import { useEffect, useState } from "react";
 const Dashboard = () => {
   const [searchItem, setSearchedItem] = useState("");
   const [workoutList, setWorkoutList] = useState([]);
+  const [offsetValue, setOffsetValue] = useState(0);
 
   const searchItemHandler = () => {
     console.log(searchItem, "searchItem");
@@ -20,7 +21,7 @@ const Dashboard = () => {
   const fetchWorkoutDetails = async () => {
     try {
       const result = await fetch(
-        "https://exercisedb-api.vercel.app/api/v1/exercises?limit=20"
+        `https://exercisedb-api.vercel.app/api/v1/exercises?offset=${offsetValue}&limit=10`
       );
       const { data } = await result.json();
       console.log(data, "exercisedata");
@@ -31,8 +32,9 @@ const Dashboard = () => {
   };
 
   useEffect(() => {
+    console.log('Fetching workouts....')
     fetchWorkoutDetails();
-  }, []);
+  }, [offsetValue]);
 
   return (
     <>
@@ -55,8 +57,18 @@ const Dashboard = () => {
               Search
             </button>
           </div>
-          <div className="wx-8">
+          <div className="wx-8 md-4">
             <WorkoutGrid workoutList={workoutList} />
+          </div>
+          <div className="mx-auto my-5 flex justify-between w-[50%]">
+            <button className="cursor-pointer bg-white text-black rounded-md p-2"
+            onClick={() => setOffsetValue(prev => Math.max(prev - 10, 0))} disabled={offsetValue === 0}>
+              Previous
+            </button>
+            <button className="cursor-pointer bg-white text-black rounded-md p-2"
+            onClick={() => setOffsetValue(offsetValue + 10)}>
+              Next
+            </button>
           </div>
         </>
       )}
