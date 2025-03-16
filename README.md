@@ -1,5 +1,5 @@
 # 🏋️‍♂️ OptiFit – Your Ultimate Workout Companion
-OptiFit is a fitness-focused web app that helps users discover and manage workouts efficiently. With an intuitive UI and a favorites feature, it simplifies fitness planning.
+OptiFit is a fitness-focused Next.js web application that helps users discover and manage workouts efficiently. With an intuitive UI and a favorites feature, it simplifies fitness planning.
 
 ## 🚀 Features
 - **Browse a variety of workouts**
