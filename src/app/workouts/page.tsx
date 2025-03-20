@@ -1,6 +1,7 @@
+import Workout from "@/components/workouts-section/Workouts";
+
 const Workouts = () => {
-    return(
-    <h1>Hey!! You&apos;ve reached the workouts page.</h1>
-)};
+  return <Workout />;
+};
 
 export default Workouts;
