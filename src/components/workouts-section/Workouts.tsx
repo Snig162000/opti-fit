@@ -11,22 +11,32 @@ const Workout = () => {
   const [offsetValue, setOffsetValue] = useState(0);
 
   const searchItemHandler = () => {
-    console.log(searchItem, "searchItem");
-    const filteredWorkouts = workoutList.filter((workout: WorkoutType) =>
-      workout?.name.toLowerCase().includes(searchItem.toLowerCase())
-    );
-    setWorkoutList(filteredWorkouts);
-    setSearchedItem("");
+    if(searchItem) {
+      const filteredWorkouts = workoutList.filter((workout: WorkoutType) =>
+        workout?.name.toLowerCase().includes(searchItem.toLowerCase())
+      );
+      setWorkoutList(filteredWorkouts);
+      setSearchedItem("");
+    } else {
+      fetchWorkoutDetails();
+    }
   };
 
   const fetchWorkoutDetails = async () => {
     try {
       const result = await fetch(
-        `https://exercisedb-api.vercel.app/api/v1/exercises?offset=${offsetValue}&limit=10`
+        `https://exercisedb.p.rapidapi.com/exercises?limit=10&offset=${offsetValue}`,{
+          headers : {
+            "Content-Type": "application/json",
+            'x-rapidapi-key': process.env.NEXT_PUBLIC_RAPID_API_KEY,
+            'x-rapidapi-host': 'exercisedb.p.rapidapi.com'
+          }
+        }
       );
-      const { data } = await result.json();
+      const data  = await result.json();
+      console.log(result, 'exerciseResult')
       console.log(data, "exercisedata");
-      setWorkoutList(data?.exercises);
+      setWorkoutList(data);
     } catch (error) {
       console.error(error);
     }
@@ -36,6 +46,8 @@ const Workout = () => {
     console.log("Fetching workouts....");
     fetchWorkoutDetails();
   }, [offsetValue]);
+
+  console.log(workoutList, 'workoutLists')
 
   return (
     <>
